@@ -1,0 +1,417 @@
+ // 1
+// Git Part 1
+
+- Git [is Distributed Version Control Dydtem] [يستخدم لهندلة اصدارات المشاريح عند التطوير بمعنا يحتفض كل اصدار نسخة]
+- Git is free And Open Source [مجاني ومفتوح المصدر]
+- Github is Source for Project and Sources[ Gitlab, BitBucket] [هنالك مواقع بتأدي نفس الجيت هب]
+- Github Simplify Using Git [الجيت هب يسهل علي التعامل والمور والدخول للجت]
+- You Can Use Git Without Github [يمكن استخدام الجيت بدون استخدام الجت هب او اي بروجكت شبيهة له]
+- Git Has GUI [ الجت له وجهة جرافيكية تقدر تتعامل معه بالماوس مش بس كوماند لاين]
+
+
+** Why You Must Learn Git?
+1- Devs Contribute to The Same Project [مافش في الفريق كل شخص معى بروجكت لوحده كلهم يضيفو ويحذفو ويعدلو في نفس النسخة]
+2- You Can Revert Changes [تقد تعرف من الذي عدل وتلغي التعديل]
+3- You Can Collabarate Fix Lssues [نستطيع التعاون في تعديل واضافة تحسينات للبروجكت انا وعدة اشخاص]
+4- You Can Collabarate to Creat New Features [كل شخص يضيف تعديلات حسب مجاله  وبعدين الكود يتجمع ]
+5- You Can Solve Confilcts [اذا في تعديل من عدة اشخاص على نفس الكود يقارن تايهما كود سليم وانا اختار الكود السليم]
+6- You Can Organize Features [كل تعديل تعدله يحفظ نسخة منه في كومنت تستطيع مراجعتها بأي وقت وكل معلومات الذي كتبها]
+
+// Github Part 2
+
+** Words You Will Hear [الكلمات اللي بتسمعها في الكورس]
+
+- Repository = Repo [مستودع المروجكت الو الاعمال التي تم رفعها]
+- Branch [قسم او فرع ] [كل ميزة او شيأ يطلب مني اعملها برانش خاص واعمل التعديل حقي وارفع البرانش وبهد كذا تستطيع حذفه]
+- Local Repo [الحاجة اللي اشتغل عليها]
+- Remote Repo [الجت هب اة الجت لاب او السرفر حق الشركة]
+- Cooment [Snapshot or Checkpoint  in Your Locl Repo] [تعليق للنقة اللي وصلتولها بالمشروع الحالي قبل رفعها]
+- Clone [From Local Or Remote] [استنساخ من  المنطقة اللي اشتغل عليها او من السرفر او الجت هب او غيره] [قد يكون في اكثر من نسخة في الللوكل ويتم رفع النسخة الاصح]
+- Pull [You Pull Change Frome Remote Repo to Your Local] [تسحب التعديلات من الريموت الى اللوكل حقي]
+- Push [Uplod Local Changes to Remote] [ترفع من اللوكل حقي الاى الريموت]
+- Pull Request [Tell Other About Your Changes to Pull it From Local to Remote] [اقول لبقة الفريق اننا عملت تعديل خذو التعديل من اللوكل الى الريموت] [بمعنةى الررءيس يراجع التعديلات و  يقبل اتعديل او يعدل عليه]
+
+==================================================================================
+// Github Part 3
+
+// 2 clon Repo Project From Github [خطوات تنزيل اي مشروع من الجت هب]
+** CMD [نفتح موجه الأوامر]
+1- cd Downloads\ [ندخل اليوزر ومجلد التنزيلات]
+2- mkdir My-Github [My-Github إنشاء مجلد في التنزيلات بلأسم]
+3- cd My-Github [My-Github الدخول الى المجلد]
+4- git clone https://github.com/M-Ad-Dali/news_site_blog_laravel-9.git [اقوم بعمل تنزيل المشروع الى هذا الملف عبر الرابط المأخوذ من الريبو]
+5- cd news_site_blog_laravel-9\ [ادخول الى ملف المشروع المنزل]
+6- dir [عرض محتويات المجلد]
+
+// Github Part 4
+
+** cmd
+1- cd news_site_blog_laravel-9\ 
+2- git status [خالة المشروع هل تم رفع كل الملفات المطلوبة]
+  /* [في ملفين داخل المشروع لم يتم اضافتهم  هو لا يعرف عنهم شيء]
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+          css/ [الملف الاول]
+          index.html [الملف الثاني]
+
+  /*
+3- git add css\style.css [يضيف ملف واحد فقط] (OR) git add * [يضيف كل الملفات]
+/*
+Changes to be committed: [تم رفع افنين ملفات الى الستيجنج اريا ومنتظر املهم كومت]
+  (use "git restore --staged <file>..." to unstage)
+        new file:   css/style.css [الملف الاول]
+        new file:   index.html [الملف الثاني]
+*/
+4- git reset heat osama.txt [اذا رفعت ملف بالخطأ الى الستجنج اريا واشتي الغيه من التيج]
+5- git commit -m "Created The main Project Structure" [انشاء شرح عن اللي عملته]
+6- git status 
+*/ ["git push" يقول معي كومنت واحد عشان اارق=فعه من الوكل الى الريموت ريبو استخدم]
+  On branch main
+  Your branch is ahead of 'origin/main' by 1 commit.
+    (use "git push" to publish your local commits)
+
+  nothing to commit, working tree clean
+/* 
+7- [استطيع اعيد الخطوات لاضافة ملف الى الستيج واسويلهم بوش مرة واحدة بنفس الخطوات السابقة]
+8- git status 
+
+// Github Part 5
+Download Git 
+Download semdr
+  (OR)
+Download semdr Full [Cemdr & Git]
+"From Web Chrome"
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git status
+*/ ["git push"
+  On branch main
+  Your branch is ahead of 'origin/main' by 1 commit.
+    (use "git push" to publish your local commits)
+
+  nothing to commit, working tree clean
+/* 
+3- git branch [يعرض كل الاقسام او الفئة الل انا استخدمها]
+* main []
+  (OR)
+* master []
+
+4- git remote -v [لمعرفة اريموت ايش هو اورجين]
+*/
+  origin  https://github.com/M-Ad-Dali/news_site_blog_laravel-9.git (fetch)
+  origin  https://github.com/M-Ad-Dali/news_site_blog_laravel-9.git (push)
+/*
+
+*/
+On branch main
+Your branch is up to date with 'origin/main'. [رفع مل الملفات التي تم اضافتها في اللوكل إلى الجيت هب في الريبو لملف المشروع]
+
+Changes not staged for commit: [هذي الرسالة تقول انو في ملف تم التعديل عليه]
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+/*
+
+5-  git add css\style.css 
+6- git commit -m "Modified The Css Fill"
+
+
+// Github Part 6
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git status
+  [اذا كان في تعديلات من الفريق وتم رفعخا يتم جلبها بأمر]
+3- git pull origin [جلب التعديلات من الريموت ودمجها في الوكل او ملف المشروع في الجهاز]
+
+
+// Github Part 7
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git status
+
+  [عرض لست عن اعدادات الخاصة بالجت]
+3- git config --lest
+3- git config -l
+*/
+  core.symlinks=false
+  core.autocrlf=true
+  core.fscache=true
+  color.interactive=true
+  color.ui=auto
+  help.format=html
+  diff.astextplain.textconv=astextplain
+  rebase.autosquash=true
+  filter.lfs.clean=git-lfs clean -- %f
+  filter.lfs.smudge=git-lfs smudge -- %f
+  filter.lfs.process=git-lfs filter-process
+  filter.lfs.required=true
+  credential.helper=helper-selector
+  safe.directory=C:/flutter
+  safe.directory=C:/flutter
+  safe.directory=C:/
+  user.email=mohammed.addali@gmail.com
+  user.name=Moka-Ad-Dali
+  credential.helperselector.selected=manager
+  core.repositoryformatversion=0
+  core.filemode=false
+  core.bare=false
+  core.logallrefupdates=true
+  core.ignorecase=true
+  remote.origin.url=https://github.com/M-Ad-Dali/news_site_blog_laravel-9.git
+  remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+  branch.main.remote=origin
+  branch.main.merge=refs/heads/main
+*/
+4- git help config [يفتحلك المول حق الجت من النت ادكومنتيشن وكل معلومات الجت فيه والللي من مكتوبة بالفايل عندي]
+5- git config -- global user.email [اعرض ايش قيمة اليوزر ايميل في الجيت]
+6- git config -- global user.email "m@gmail.com" [اسند قيمة اليوزر ايميل في الجيت]
+7- git config -- global user.name [اعرض ايش قيمة اليوزر الاسم في الجيت]
+8- git config -- global user.name "Mohammed Al-Dali" [اسند قيمة اليوزر الاسم في الجيت]
+
+9- git config -l --show-origin [هذا الامر يقلك جاب البيانات حق الكونفج من اين ]
+
+10- 6- git config -- global user.email "" [لمسح البيانات من الكونفيج]
+11- 6- git config -- unset user.email [لمسح البيانات من الكونفيج]
+
+12- git config --global --edit [لتعديل على البيانات يدوي عبر الاديتور]
+
+13- touch new_file.exe [إنشاء ملف جديد
+
+]
+
+// Github Part 8
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+
+public Kye [حاجة يخلي السرفر يتعرف علي بدون يوزر او باسورد]
+ ssh-Keygen [Secur Shell - Keygen Reter] -t ras [Rivst Shmer Adelman] [الالجرثم بتاع التايب اللي بننشأ فيه الكي] -b 4096 [عدد البتس] -C [الاميل حقنا] ""
+2- ssh-keygen -t rsa -b 4096 -C "moka@gmail.com" [أمر الذي نضع فيه الإيميل]
+
+/*
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (C:\Users\MOKA-AD_ALI/.ssh/id_rsa): [أين مكان الكي]
+  Created directory 'C:\\Users\\MOKA-AD_ALI/.ssh'.
+  Enter passphrase (empty for no passphrase):  [اضافة باسورد]
+  Enter same passphrase again: [أعد الباسورد مرة أخرى]
+  Your identification has been saved in C:\Users\MOKA-AD_ALI/.ssh/id_rsa 
+  Your public key has been saved in C:\Users\MOKA-AD_ALI/.ssh/id_rsa.pub [هذا ملف الببلك كي اللي انا اقدر استعمله]
+  The key fingerprint is:
+  SHA256:z5hvPe8L+NQfNzGYI9+PQi5ucj+TeUAoH9G9wx6FC6I moka@gmail.com
+  The key's randomart image is:
+  +---[RSA 4096]----+
+  |           . . . |
+  |          o o o .|
+  |         . + o + |
+  |        E o . O  |
+  |        So + = = |
+  |         =..=.+ o|
+  |        o ++o=.+.|
+  |        ..=oX..o=|
+  |         *oooO=.o|
+  +----[SHA256]-----+
+*/
+
+3- cat ~/.ssh/id_rsa.pub [أمر يعرض محتوى أي ملف تجيبله]
+*/ [هذا هو الكي حقي]
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6kjnp1s1SqUINdvoVbVIMfYKQkxdIcqsCHGm7GOxPOlRzT0A6Yqp/
+  Qypa4H8aNmgHx0UWxM5L9xQhzqKQ/lCPelGK5DPWrG70k70q1hUGswQQSBn8GJN6KvZkAH6dvrvnfmzbvUHU7rTidvAQXUp7K7Mi+
+  Q35GAfpUltUTSX5Uamcq1CmNal+UEsdJXjqSmmL0Cp6NjAVEz1FCCl3M2K/YjwAtSCHghkAWm3UJ5HfwKKXYQiI6IKKqfZciJiU0uTmj+TLICqx5xfqzHj1A8w7X+DoPiLA0C5VvTDfi+
+  G5nbBeAzNitMS7MO2A4i11JC9jNZ441bC99LIaK53968mUMdaPmUQL69jrSTVusUwA78ChfjxGsBiEspO3pmYKo3zkOfnZn5u+Zx3iDcP8OB93XZQQgdA+
+  UqbKvHR2Lw8RkXzFNakZ1uGknp9SW64KaCoz4MrJp97naTiX3d99IPhBPK88kgNY32D0yYd5MQkszLcU4CTlBVfiK7le9NTeD2F6/AmbXNzwi1t9vZJqoWBc2LYJ2GCfSQ9onaNnsUKiNmTo93m8g8UfSn4bWHk9rqSy
+  /lfB7YqP/RDr7O10snihALKOwEqwY1N+dcE/qwR3KdG1BKMr6Z57wVFupBLhpD0PHxw3R4x+ER8wxfStpAArsrHvcVucMRw1Q5W8RLUC+Q== moka@gmail.com
+*/
+  [يتم استخدام هذا الامر بعد اضافة الكي الى حسابي في الجت هب] [;`h hkh ljwg fhg[dj if ]]
+4- ssh -T git@github.com [للتأكد انني من يستخدم هذا الحساب] [ثم يعرض رمز اكتب ارمز]
+
+// Github Part 9
+
+  [إنشاء مشروع ونرفعه على الجيت هب]
+
+** cmd cemder
+1- cd [الدخول للمكتن اللي بنشأ فيه الملف]
+2- makdir repos
+3- cd repos\
+4- git int [يعمل انشليز على موقع الملف ويعرض مساره]
+5- touch index.html [Creat FIle]
+6- git status
+7- add index.htmlgit -m commit "Created The Main File"
+8- [إنشاء ريبو جديد في الجيت هب]
+9- git remote add origin https/git@github.com:[ايميلي حق الجت]/[أسم المشروع اللي انشأته بالجت].git [وهذا لنك حق الريموت ريبو]
+9- git remote add origin git@github.com:[ايميلي حق الجت]/[أسم المشروع اللي انشأته بالجت].git [وهذا لنك حق الريموت ريبو]
+10- git push -u origin master [السلاش يو معناتها انو ناخذ اخر فرجن ونكمل عليه] [هذا الأمر رفع ملفات المشروع للجيت هب]
+
+// Github Part 11
+
+alias [اختصر امر ب كلمة او بأسم صغير يكون معرف عد صاحبها]
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git status
+3- git config --global alias.st[بعد الدت الكلمة المختصرة] status [اختصر ماذا]
+4- git config --global alias.st [st لعرض اختصرنا ماذا في ال]
+5- git st === git status
+
+6- git config --global alias.cm "commit -m" [في حال كانت الجملة المتصرةفيها فراع نحطها ب دبل كوتا]
+7- git cm "Mohammed" === git commit - m "Mohammed"
+
+// Github Part 12
+Branch
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git branch
+3- git branch Scroll [انشاء برانش بأسم سكرول]
+4- git checkout Scroll [انتقال واستخدام برانش سكرول]
+5- git branch -d Scroll [حذف البرانش في حال عدم وجود تعديلات]
+5- git branch -D Scroll [حذف البرانش في حال وجود تعديلات أو عدمها]
+6- git checkout -b Dev-Feature [طريقة لإنشاء برانش وادخول عليه بأمر واحد]
+7- git branch -m Devlopment [تغيير اسم البرانش المستخدم للأسم الجديد]
+  [لدمج البرانش الماستر مع الدف نعمل الخطوات التالية]
+8- git checkout master [ادخل لدف الماستر]
+9- git marge Devlopment [وأدمجه مع الديف]
+
+10- git checkout -b Scroll
+11- touch main.css
+12- git commit -m "Create File"
+13- git push origin Scroll
+
+// Github Part 13
+stash [منطقة لتخزين الملفات التي لا اريد رفعها]
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\
+2- touch about.html
+3- ls [عرض الملفات في المشروع]
+4- echo " [محتويات الملف]" > about_readme.txt [أسم الملف] [طريقة جديدة لانشاء ملف جديد وطباعة محتوى بداخله]
+5- git status
+  /*
+    new file: 
+    new file: 
+  */
+6- git add *
+7- git stash [تخزن الملفات في مكان بحيث لا يتم رفعها] [git add وتستهدم بعد]
+  /*
+  λ git stash
+    Saved working directory and index state WIP on main: 479cdcf Modified The Css Fill [تم تخزين الملفات لن يتم رفعها]
+  */
+8- git status 
+  /*
+    nothing to commits
+  */
+git stash list [هل يوجد ملفات مخزنة في الستاش يعرض بالاندكس]
+10- git stash pop [يخرج الملفات المخزنة في الستاش]
+11- git commit -m "Added files"
+12- git status
+13- git push origin main
+
+// Github Part 14
+stash
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+
+2- touch m.txt
+3- git add m.txt
+4- gut status
+5- git stash
+
+6- touch x.txt
+7- git add x.txt
+8- git stas
+9- git stash list [نلاحط هنا انه تم تخزين كل كرة بمكان وبأندكس خاص]
+
+10- touch mox.txt
+11- git add mox.txt
+12- git stash save "MOX Text" [طريقة تخزين و تغيير الرسالة عند عرض جميع الستاش  لمعرقة محتوى المخزن]
+13- git stash list [نلاحظ هنا انه تم تغيير الرسالة في المخزن التل عدلنا في الرسالة]
+
+14- git pop [يتم اخراج اخر مخزن من الستاش]
+
+15- git stash apply [يستخرج نسخة من اخر مخزن في الستاش بدون مسح المخزن من الاستاش]
+16- git stash list [نلاحظ ان اخر مخزن موجود]
+
+17- git commit -m "MOX Text"
+18- git push origin main
+
+19- git stash pop stash@{1} [جلب مخزن معين من الستاش عبر الايدي]
+19- git stash aplly stash@{1} [جلب مخزن معين من الستاش عبر الايدي مع الاحتفاظ بنسخة في المخزن]
+
+20- git stash drop [حذف اخر مخبأ في الستاش]
+20- git stash drop stash@{0} [حذف مخبأ رقم الاندكس في الستاش = 0]
+
+21- git stash show [عرض معرفة محتويات الستاش]
+21- git stash show stash@{0} [عرض معرفة محتويات ستاش رقم الايدي = 0]
+
+22- git stash clear [(❁´◡`❁) مسح جميع الستاش وحيولع فيهم بجاز]
+
+// Github Part 15
+restore [ارجاع الملفات من الريموت للوكل] & Clean [حذف الملفات من اللوكل]
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- git status
+3- touch new.txt
+4- git status
+5- git add new.txt
+6- git status [لا يوجد ملف يحتاج الى رفع او كمت]
+7- git restore --stoaged new txt [ارجع الملف من الريموت الى اللوكل قبل ما يتم رفعه بالاد]
+8- git status [نلاحظ هنا ان الملف قد عاد]
+9- code new.txt [امر لفتح الملف ب الفي اس كود]
+10- touch new2.txt
+11- git status
+12- git restore --stoaged * [هذا الأمر يستخدم في حالة كان هناك اكثر من ملف في الريموت واريد ارجعه للوكل]
+13- touch new3.txt
+14- git clean -n [عرض الملفات التي سوف يتم حذفها]
+15- git add new2.txt [اضافة الملف للريموت قبل الحذف]
+16- git clean -name
+17- git clean -f [حذف الملفات المحددة]
+
+// Github Part 16
+Resetting The Head [الهد هو الذي يشير الى اخر كومت تم انشائه] [حذف كومت ااو عدة كومتس]
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- touch good.txt
+3- git status
+4- git add good.txt
+5- git commit -m "The Good Commit"
+6- git push origin main
+7- touch bad.txt
+8- git add bad.txt
+9- git commit -m "Tbad Commit"
+10- git posh origin main
+11- git log [يعرض الهد مؤشر على اي  كومت وعرض بيانات الكومت والهاش تبعهم]
+12- [Q للخروج من الهد في برنامج السمدر نضغط على حرف]
+13- git reset --head ER8wxfStpAArsrHvcVucMRw1Q5W8RLUC [هذا هاش ليس حقيقي] [هذا الامر يقوم بتراجع للهاش اللي قبل او الهاش الذي احدده]
+14- git push origin main --force [امر يعيد تحديف البيانات في الريبو واعمل فورس للتأكدأن يعمل فور ابديت]
+
+// Github Part 16
+ Ignoring Files && Directorise [تجاهل الملفات والمجلدات]
+
+** cmd cemder
+1- cd news_site_blog_laravel-9\ 
+2- touch .gitignore [إنشاء ملف يوضع داخله امر يتم فيه تاهل ملفات معينة]
+3- touch text.log
+4- git status [text.log نلاحظ هنا انه تجاهل ملف ال]
+5- touch vip.log
+6- git status [vip.log نلاحظ هنا انه لم يتجاهل ملف ال] [.gitignore والسبب يرجع الى تطبيق الشرط في ملف ال]
+7- mkdir node_packs
+8- cd node_packs
+9- touch package1.js
+10- ls
+11- cd .. [ارجع للمجلد اللي قبل]
+12- ls
+13- git status [.gitignore نلاحظ اه تجاهل المجلد والسبب يعود تحقق الشرط في ملف]
+
+14- git add text.txt [يعرض رسالى يقول ان الملف معمو له تجاهل]
+
+15- git --force text.txt [أضافة الملف إجباري رغم عن انف الإجنور]
+15- git -f text.txt [أضافة الملف إجباري رغم عن انف الإجنور]
+
+## Search Git Ignore Patterns [لتوسع في الجيت اجنور]
